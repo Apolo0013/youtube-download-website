@@ -39,7 +39,7 @@ function EscolherStream() {
         }
     ]
 }//state.dados // dados dos stream video e audio
-    const url: string = state.url
+    const url: string = 'fds'//state.url
     console.log(dados)
     //location key
     const localtion = useLocation()

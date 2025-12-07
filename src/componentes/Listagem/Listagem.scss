@@ -49,3 +49,31 @@
         .Linha-tb:last-child {border: 0;}
     }
 }
+
+////////////////////////////// Responsividade /////////////////////////
+//essa responsividade é baseado nos valores que receber do backend
+//largura 
+
+@media (max-width: 600px) {
+    .wraper-Conteiner-Listagem {
+        width: 100% !important;
+        overflow: auto;
+
+        .Conteiner-Listagem {
+            overflow-x: auto !important;
+            width: 100% !important;
+            .Linha-tb > .Cedula-tb {
+                flex: 1;
+            }
+        }
+    }
+}
+
+//Responsividade para despositivos moveis
+//largura <= 500px
+
+@media (max-width: 500px) and (pointer: coarse) {
+    .wraper-Conteiner-Listagem {
+        h3 {font-size: rem(20);}
+    }
+}

@@ -1,12 +1,23 @@
 @use "../../utils/utils.scss" as *;
 
 .conteiner-head-tb {
-    width: 100%;
+    width: fit-content;
+    min-width: 100%;
     background: rgb(111, 35, 244);
     border-bottom: rem(2) solid rgb(139, 5, 248);
 
     .conteiner-head-tb-item {
         color: white;
         font-weight: bold;
+    }
+}
+
+
+//Responsividade para despositivos moveis
+//largura <= 500px
+
+@media (max-width: 500px) and (pointer: coarse) {
+    .conteiner-head-tb > .conteiner-head-tb-item {
+        font-size: rem(15);
     }
 }

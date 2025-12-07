@@ -1,7 +1,8 @@
 @use '../../utils/utils.scss' as *;
 
 .conteiner-item-tb {
-    width: 100%;
+    width: fit-content;
+    min-width: 100%;
     background: rgb(70, 15, 136);
     transition: 0.3s ease;
     cursor: pointer;
@@ -13,5 +14,14 @@
     .conteiner-item-tb-item {
         font-weight: 500;
         color: white;
+    }
+}
+
+
+//Responsividade para despositivos moveis
+//largura <= 500px
+@media (max-width: 500px) and (pointer: coarse) {
+    .conteiner-item-tb > .conteiner-item-tb-item{
+        font-size: rem(13);
     }
 }
