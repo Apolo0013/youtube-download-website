@@ -1,0 +1,12 @@
+@use "../../utils/utils.scss" as *;
+
+.conteiner-head-tb {
+    width: 100%;
+    background: rgb(111, 35, 244);
+    border-bottom: rem(2) solid rgb(139, 5, 248);
+
+    .conteiner-head-tb-item {
+        color: white;
+        font-weight: bold;
+    }
+}

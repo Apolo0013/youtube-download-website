@@ -1,0 +1,51 @@
+@use "../../utils/utils.scss" as *;
+
+.wraper-Conteiner-Listagem {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        width: 90%;
+        text-align: center;
+        color: white;
+        font-size: rem(25);
+        margin-bottom: rem(10);
+        border-bottom: rem(1) solid rgba(255, 255, 255, 0.42);
+    }
+
+    .Conteiner-Listagem {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        border: rem(3) solid rgba(255, 255, 255, 0.42);
+        border-radius: rem(14);
+        overflow: hidden;
+    
+        * {
+            font-family: "Sora", Arial, Helvetica, sans-serif;
+        }
+
+        .Linha-tb {
+            padding: 0 rem(10) 0 rem(10);
+            display: flex;
+            align-items: center;
+            gap: rem(15);
+            height: rem(40);
+            border-bottom: rem(2) solid rgb(191, 86, 232);
+
+            .Cedula-tb {
+                min-width: rem(100);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+        }
+
+        .Linha-tb:last-child {border: 0;}
+    }
+}

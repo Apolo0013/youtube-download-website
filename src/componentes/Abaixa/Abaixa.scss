@@ -1,0 +1,121 @@
+@use '../../utils/utils.scss' as *;
+
+.conteiner-abaixa {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    * {
+        font-family: 'Sora', Arial, Helvetica, sans-serif;
+        color: white;
+        position: relative;
+        z-index: 2;
+    }
+
+    h1.abaixa-h1-main {font-size: rem(50);}
+
+    p.abaixa-p-text {color: white; font-weight: bold;}
+
+    //background
+    .conteiner-background-abaixa {
+        z-index: 1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        filter: brightness(0.7);
+
+        .colunas-back {
+            flex: 1;
+            height: 110%;
+            background: rgb(172, 113, 228);
+        }
+
+        .up-down {animation: up-down 6s alternate infinite forwards;}
+
+        @keyframes up-down {
+            from {height: 110%;}
+            to {height: 0%;}
+        }
+    }
+
+        
+    .conteiner-abaixa-area-botao-back {
+        margin-top: rem(60);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: rem(20);
+        height: auto;
+        opacity: 0;
+
+        //botao back
+        .abaixa-btn-voltar {
+            aspect-ratio: 4 / 1;
+            width: rem(150);
+            padding: rem(5);
+            border-radius: rem(1);
+            background: rgb(58, 56, 66);
+            font-size: rem(25);
+            border: rem(1) solid rgb(51, 9, 75);
+            outline: 0;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+
+            &:hover {
+                filter: brightness(0.9);
+            }
+        }
+    }  
+
+    .up-move {animation: up-move 2s ease 1 forwards;}
+    @keyframes up-move {
+        to {transform: translateY(rem(-30)); opacity: 1;}
+    }
+
+
+    //aviso
+    //class que vai trazer ele de voltar, no caso ele estara escodido
+    .abaixa-show-aviso {right: 0 !important;}
+
+    .conteiner-abaixa-aviso {
+        transition: 0.5s ease;
+        position: absolute;
+        right: rem(-250);
+        top: 10%;
+        width: rem(250);
+        height: auto;
+        display: flex;
+        align-items: center;
+        background: white;
+        padding: rem(10);
+        border-radius: 0 0 0 rem(10) ;
+        border-bottom: rem(5) solid rgba(255, 0, 0, 0.549);
+        animation: pisca-alerta 0.8s ease-in-out 2 forwards;
+
+        &:hover {
+            border-color: red;
+        }
+        
+        .abaixa-aviso-text {
+            width: 100%;
+            height: auto;
+            text-align: justify;
+            hyphens: auto;
+            color: black;
+
+        }
+
+        //Keyframe, ondem contem uma animacao de  pisca alerta
+        @keyframes pisca-alerta {
+            from {background: rgb(246, 183, 183);}
+            to {background: white;}
+        }
+    }
+}

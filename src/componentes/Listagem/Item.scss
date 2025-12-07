@@ -1,0 +1,17 @@
+@use '../../utils/utils.scss' as *;
+
+.conteiner-item-tb {
+    width: 100%;
+    background: rgb(70, 15, 136);
+    transition: 0.3s ease;
+    cursor: pointer;
+    
+    &:hover {
+        background: rgb(108, 23, 212);
+    }
+
+    .conteiner-item-tb-item {
+        font-weight: 500;
+        color: white;
+    }
+}

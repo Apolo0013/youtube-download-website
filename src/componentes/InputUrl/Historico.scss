@@ -1,0 +1,96 @@
+@use '../../utils/utils.scss' as *;
+
+.wraper-conteiner-historico {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-height: rem(200);
+    background: rgba(115, 0, 255, 1);
+    border: rem(3) solid rgba(115, 0, 255, 0.304);
+
+    * {
+        color: rgb(208, 208, 208);
+        font-family: 'Sora', Arial, Helvetica, sans-serif;
+    }
+
+    .text-h3-historico {
+        padding: rem(3);
+        height: fit-content;
+        font-size: rem(20);
+    }
+    
+    .conteiner-historico {
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        gap: rem(10);
+        grid-template-columns: 1fr;
+        background: rgba(44, 10, 85, 0.304);
+        
+        .item-historico {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: rem(10);
+            overflow-x: hidden;
+            width: 100%;
+            height: rem(50);
+            transition: 0.2s ease;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(104, 23, 202, 0.504);
+            }
+
+            .item-historico-text {
+                overflow-x: hidden;
+                text-wrap: nowrap;
+                width: 100%;
+                font-weight: 400;
+                font-size: rem(20);
+            }
+        }
+    }
+}
+
+//////////////////////////// Responsividade ///////////////////////////
+
+//largura <= 1000px
+
+@media (max-width: 1000px) {
+    .wraper-conteiner-historico {
+        .text-h3-historico {font-size: rem(18);}
+        .conteiner-historico > .item-historico > .item-historico-text {font-size: rem(17);}
+    }
+}
+
+//largura <= 600px
+
+@media (max-width: 600px) {
+    .wraper-conteiner-historico {
+        .text-h3-historico {font-size: rem(15);}
+
+        .conteiner-historico {
+            gap: 0;
+            .conteiner-historico {
+                height: rem(30);
+                .item-historico-text {font-size: rem(15);}
+            }
+        }
+    }
+}
+
+//Responsividade para dispositivo moveis
+
+//largura <= 500px
+
+@media (max-width: 500px) and (pointer: coarse) {
+    // vamos deixa ele esticado 
+    //Nao sei porque o fdp do overflow-y: auto;, nao esta fucionando no  .conteiner-historico. por isso que estou botando ele aqui
+    .wraper-conteiner-historico {overflow-y: auto;}
+    
+}
