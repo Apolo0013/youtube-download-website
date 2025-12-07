@@ -4,7 +4,7 @@ import { GlobalContext, type GlobalContextType } from "./ContextGlobal";
 function ProviderContext({ children }: {children: React.ReactNode}) {
     return (
         <GlobalContext.Provider value={{
-            UrlFornecida: false,
+            UrlFornecida: true,
             StreamFornecida: false
         }}>
             {children}

@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow-y: auto;
 
     * {
         font-family: "Sora", Arial, Helvetica, sans-serif;
@@ -31,5 +32,39 @@
         gap: rem(50);
         width: 100%;
         height: auto;
+    }
+}
+
+////////////////////////////// Responsividade /////////////////////////
+//largura <= 1000px
+
+@media (max-width: 1000px) {
+    .conteiner-Escolher-Stream {
+
+        h1 {
+            margin-top: rem(30);
+            font-size: rem(45);
+        }
+
+        p {
+            font-size: rem(18);
+            margin-bottom: rem(20);
+        }
+
+        .conteiner-streams {
+            align-items: center !important;
+            flex-direction: column-reverse !important;
+        }
+    }
+}
+
+//largura <= 700px 
+@media (max-width: 700px) {
+    .conteiner-Escolher-Stream {
+        h1 {font-size: rem(30);}
+        p {font-size: rem(15);}
+        .conteiner-streams {
+            gap: rem(30);
+        }
     }
 }

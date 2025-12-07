@@ -6,11 +6,42 @@ type audioevideo = { videos: object[], audios: object[]}
 
 function EscolherStream() {
     const { state }: { state: { dados: audioevideo, url: string } } = useLocation()
-    const dados: audioevideo = state.dados // dados dos stream video e audio
+    const dados: audioevideo = {
+    "audios": [
+        {
+            "itag": 139,
+            "size": "1.432 MB",
+            "audioCodec": "mp4a.40.5"
+        },
+        {
+            "itag": 140,
+            "size": "3.798 MB",
+            "audioCodec": "mp4a.40.2"
+        },
+        {
+            "itag": 249,
+            "size": "1.487 MB",
+            "audioCodec": "opus"
+        },
+        {
+            "itag": 251,
+            "size": "4.114 MB",
+            "audioCodec": "opus"
+        }
+    ],
+    "videos": [
+        {
+            "itag": 18,
+            "size": "4.926 MB",
+            "resolucao": "640x360",
+            "videoCodec": "avc1.42001E",
+            "qualidade": "360p"
+        }
+    ]
+}//state.dados // dados dos stream video e audio
     const url: string = state.url
+    console.log(dados)
     //location key
-    console.log("escolherstream.tsx")
-    console.log(url)
     const localtion = useLocation()
     return (
         <div className="conteiner-Escolher-Stream" key={localtion.key}>
