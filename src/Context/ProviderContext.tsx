@@ -5,7 +5,7 @@ function ProviderContext({ children }: {children: React.ReactNode}) {
     return (
         <GlobalContext.Provider value={{
             UrlFornecida: true,
-            StreamFornecida: false
+            StreamFornecida: true
         }}>
             {children}
         </GlobalContext.Provider>

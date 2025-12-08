@@ -82,7 +82,8 @@ function Abaixa() {
     const { state }: {state: BodyAbaixaStream} = useLocation()
     const body = useRef<BodyAbaixaStream>(state)
     useEffect(() => {
-        AbaixaWraper()
+        SetBotaoBackClass('up-move')
+        //AbaixaWraper()
     }, [])
     return (
         <div className="conteiner-abaixa">
@@ -95,6 +96,7 @@ function Abaixa() {
             <h1 className='abaixa-h1-main'>Aguarde enquanto o processo é iniciado</h1>
             <p className='abaixa-p-text'>O download está sendo preparado. Isso pode levar alguns instantes.</p>
             <BotaoBack StateClass={StateBotaoBackClass} />
+            <AvisoError text="Houve um erro ao baixar o seu vídeo/áudio 😕 Por favor, tente novamente mais tarde ou envie outro link 🔁"/>
         </div>
     )
 }

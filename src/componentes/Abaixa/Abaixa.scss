@@ -16,9 +16,9 @@
         z-index: 2;
     }
 
-    h1.abaixa-h1-main {font-size: rem(50);}
+    .abaixa-h1-main {font-size: rem(50);}
 
-    p.abaixa-p-text {color: white; font-weight: bold;}
+    .abaixa-p-text {color: white; font-weight: bold;}
 
     //background
     .conteiner-background-abaixa {
@@ -104,12 +104,12 @@
         }
         
         .abaixa-aviso-text {
+            font-size: rem(18);
             width: 100%;
             height: auto;
             text-align: justify;
             hyphens: auto;
             color: black;
-
         }
 
         //Keyframe, ondem contem uma animacao de  pisca alerta
@@ -117,5 +117,74 @@
             from {background: rgb(246, 183, 183);}
             to {background: white;}
         }
+    }
+}
+
+/////////////////////////////// Responsividade ////////////////////////
+//largura <= 1060px
+
+@media (max-width: 1060px) {
+    .conteiner-abaixa {
+        .abaixa-h1-main {font-size: rem(40); }
+        .abaixa-p-text {font-size: rem(15);}
+
+        .conteiner-abaixa-aviso >  .abaixa-aviso-text {
+            font-size: rem(15);
+        }
+
+        .conteiner-abaixa-area-botao-back {
+            .abaixa-btn-voltar {
+                width: rem(130);
+            }       
+        }
+    }
+}
+
+//largura <= 840px
+@media (max-width: 840px) {
+    .conteiner-abaixa {
+        .abaixa-h1-main {font-size: rem(30);}
+        .abaixa-p-text {font-size: rem(13);}
+    }
+}
+
+//largura <= 650px
+@media (max-width: 650px) {
+    .abaixa-h1-main {font-size: rem(25) !important; text-wrap: nowrap;}
+
+    .conteiner-abaixa > .conteiner-abaixa-aviso > .abaixa-aviso-text {font-size: rem(13);}
+
+    .conteiner-abaixa > .conteiner-abaixa-area-botao-back > .abaixa-btn-voltar {
+        font-size: rem(20);
+        width: rem(100);
+    }
+}
+
+//largura <= 500px
+@media (max-width: 500px){
+    .conteiner-abaixa-aviso {top: 5% !important;}
+
+    .conteiner-abaixa {
+        .abaixa-h1-main {font-size: rem(18) !important;}
+        .abaixa-p-text {
+            font-size: rem(13) !important;
+            text-align: center !important;
+        }
+        .abaixa-p-text:nth-of-type(1) {padding: rem(4);}
+
+        .conteiner-abaixa-area-botao-back > .abaixa-btn-voltar {
+            font-size: rem(17);
+            width: rem(90);
+        }
+    }
+}
+
+//largura <= 400px
+@media (max-width: 400px) and (pointer: coarse) {
+    .conteiner-abaixa {
+        .abaixa-h1-main {font-size: rem(16.5) !important;}
+        .abaixa-p-text {font-size: rem(13) !important;}
+
+        .conteiner-abaixa-aviso > .abaixa-aviso-text {font-size: rem(12);}
     }
 }
